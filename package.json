@@ -1,0 +1,41 @@
+{
+  "name": "social-scanner",
+  "version": "0.0.1",
+  "description": "A node utility to scan various social networks against username.",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "repository": "git@github.com:b4dnewz/social-scanner.git",
+  "author": "b4dnewz <filippo@codekraft.it>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.5.0",
+    "commander": "^2.11.0",
+    "mkdirp": "^0.5.1",
+    "webshot": "^0.18.0"
+  },
+  "devDependencies": {
+    "coveralls": "^2.13.1",
+    "eslint": "^4.1.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "jest": "^21.0.0",
+    "jest-cli": "^21.0.0",
+    "nsp": "^2.6.3"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint . --fix",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
