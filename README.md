@@ -1,4 +1,6 @@
 # social-scanner
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+
 A node utility to scan various social networks against username.
 
 ## Installation
@@ -32,3 +34,12 @@ Usage: social-scanner [options] <username>
     -h, --help           output usage information
 
 ```
+
+[npm-image]: https://badge.fury.io/js/social-scanner.svg
+[npm-url]: https://npmjs.org/package/social-scanner
+[travis-image]: https://travis-ci.org/b4dnewz/social-scanner.svg?branch=master
+[travis-url]: https://travis-ci.org/b4dnewz/social-scanner
+[daviddm-image]: https://david-dm.org/b4dnewz/social-scanner.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/b4dnewz/social-scanner
+[coveralls-image]: https://coveralls.io/repos/b4dnewz/social-scanner/badge.svg
+[coveralls-url]: https://coveralls.io/r/b4dnewz/social-scanner
