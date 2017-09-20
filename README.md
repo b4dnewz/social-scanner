@@ -11,11 +11,14 @@ yarn global add social-scanner
 ```
 
 ## How it works?
-The script can be used as a module: 
+The script can be used as a module and take specific options in order: 
+```javascript
+socialScanner(username, output, screenshotOptions, callback)
+```
 ```javascript
 const socialScanner = require('../lib/index');
 
-socialScanner('codekraft-studio', null, (err, response) => {
+socialScanner('codekraft-studio', './output', {}, (err, response) => {
   if (err) {
     console.log('error:', err);
   }
