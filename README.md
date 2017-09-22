@@ -18,7 +18,7 @@ socialScanner(username, output, screenshotOptions, callback)
 ```javascript
 const socialScanner = require('../lib/index');
 
-socialScanner('codekraft-studio', './output', {}, (err, response) => {
+socialScanner('codekraft-studio', { output: './output' }, (err, response) => {
   if (err) {
     console.log('error:', err);
   }
@@ -37,6 +37,20 @@ Usage: social-scanner [options] <username>
     -h, --help           output usage information
 
 ```
+
+---
+
+## License
+The __email-hunter__ is released under the MIT License.
+
+## Contributing
+
+1. Fork it ( https://github.com/b4dnewz/social-scanner/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+3. Write and run the tests (`npm run test`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
 
 [npm-image]: https://badge.fury.io/js/social-scanner.svg
 [npm-url]: https://npmjs.org/package/social-scanner
