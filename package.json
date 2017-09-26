@@ -14,15 +14,15 @@
     "async": "^2.5.0",
     "commander": "^2.11.0",
     "request": "^2.82.0",
-    "webshot": "^0.18.0"
+    "webpage-capture": "0.0.5"
   },
   "devDependencies": {
     "coveralls": "^2.13.1",
-    "eslint": "^4.1.0",
+    "eslint": "^4.7.2",
     "eslint-config-xo-space": "^0.16.0",
-    "jest": "^21.0.0",
-    "jest-cli": "^21.0.0",
-    "nsp": "^2.6.3"
+    "jest": "^21.1.0",
+    "jest-cli": "^21.1.0",
+    "nsp": "^2.8.0"
   },
   "scripts": {
     "prepublish": "nsp check",
