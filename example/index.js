@@ -1,7 +1,7 @@
 const socialScanner = require('../lib/index');
 
 socialScanner('codekraft-studio', {
-  restrict: ['github', 'bitbucket', 'polyvore'],
+  restrict: ['facebook', 'github', 'bitbucket', 'polyvore'],
   screenshotOptions: {}
 }, (err, response) => {
   if (err) {
