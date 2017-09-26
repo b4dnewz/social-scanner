@@ -13,6 +13,7 @@
   "dependencies": {
     "async": "^2.5.0",
     "commander": "^2.11.0",
+    "request": "^2.82.0",
     "webshot": "^0.18.0"
   },
   "devDependencies": {
