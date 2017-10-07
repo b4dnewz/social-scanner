@@ -13,35 +13,72 @@ yarn global add social-scanner
 ## How it works?
 The script can be used as a module and take specific options in order: 
 ```javascript
-socialScanner(username, output, screenshotOptions, callback)
+socialScanner(username, options, callback)
 ```
 ```javascript
 const socialScanner = require('../lib/index');
 
 socialScanner('codekraft-studio', { output: './output' }, (err, response) => {
   if (err) {
-    console.log('error:', err);
+    console.log('Error:', err);
+    return;
   }
-  console.log('response:', response);
+  console.log('Response:', response);
 });
 
 ```
-or as a __cli-tool__ directly:
-```bash
-Usage: social-scanner [options] <username>
- 
-  Options:
- 
-    -V, --version        output the version number
-    -o, --output [path]  Where to save the output files
-    -h, --help           output usage information
+But you can also use it as a __cli-tool__ here is the usage output from `--help` command:
+```
+(^_^) SOCIAL-SCANNER
 
+Usage: social-scanner [options] <username>
+
+A node utility to scan various social networks against username.
+
+Options:
+
+  -V, --version                 output the version number
+  -o, --output [path]           Where to save the output files
+  -c, --capture                 When to take a screenshot of the page
+  -t, --timeout [milliseconds]  Milliseconds to wait before killing the screenshot
+  -r, --restrict [list]         Comma separated list of social networks to scan
+  -h, --help                    output usage information
+
+Commands:
+
+  list [options]   List all the available social networks.
+```
+
+## Options
+* __capture__: Take a page screenshot once has been loaded
+* __crop__: If the screnshot should be cropped or not
+* __output__: The output file name for the screenshot
+* __restrict__: A list (or array) of social networks to scan
+
+## Examples
+Scan a username against various social networks, without taking screenshots.
+```javascript
+socialScanner(username, {}, (err, response) => { });
+```
+
+Scan a username against various social networks, taking screenshots.
+```javascript
+socialScanner(username, {
+  capture: true
+}, (err, response) => { });
+```
+
+Scan username against some restricted social networks.
+```javascript
+socialScanner(username, {
+  restrict: ['facebook', 'github']
+}, (err, response) => { });
 ```
 
 ---
 
 ## License
-The __email-hunter__ is released under the MIT License.
+The __socia-scanner__ is released under the MIT License.
 
 ## Contributing
 

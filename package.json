@@ -14,10 +14,10 @@
     "async": "^2.5.0",
     "commander": "^2.11.0",
     "request": "^2.82.0",
-    "webpage-capture": "0.0.5"
+    "webpage-capture": "0.0.6"
   },
   "devDependencies": {
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.0",
     "eslint": "^4.7.2",
     "eslint-config-xo-space": "^0.16.0",
     "jest": "^21.1.0",
