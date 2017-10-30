@@ -6,7 +6,6 @@
     "lib"
   ],
   "main": "lib/index.js",
-  "bin": "lib/cli.js",
   "repository": "git@github.com:b4dnewz/social-scanner.git",
   "author": "b4dnewz <filippo@codekraft.it>",
   "license": "MIT",
