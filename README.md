@@ -4,14 +4,21 @@
 A node utility to scan various social networks against username.
 
 ## Installation
-You can install it as a __global__ module to use the cli-tool:
+You can install it via npm or yarn.
 ```bash
-npm install -g social-scanner
-yarn global add social-scanner
+npm install social-scanner
+yarn add social-scanner
+```
+
+## Looking for the cli?
+You can use it from the command line installing the globally the [cli](https://github.com/b4dnewz/social-scanner-cli) repository.
+```bash
+npm install -g social-scanner-cli
+yarn global add social-scanner-cli
 ```
 
 ## How it works?
-The script can be used as a module and take specific options in order: 
+The script can be used as a module and take specific options in order:
 ```javascript
 socialScanner(username, options, callback)
 ```
@@ -26,27 +33,6 @@ socialScanner('codekraft-studio', { output: './output' }, (err, response) => {
   console.log('Response:', response);
 });
 
-```
-But you can also use it as a __cli-tool__ here is the usage output from `--help` command:
-```
-(^_^) SOCIAL-SCANNER
-
-Usage: social-scanner [options] <username>
-
-A node utility to scan various social networks against username.
-
-Options:
-
-  -V, --version                 output the version number
-  -o, --output [path]           Where to save the output files
-  -c, --capture                 When to take a screenshot of the page
-  -t, --timeout [milliseconds]  Milliseconds to wait before killing the screenshot
-  -r, --restrict [list]         Comma separated list of social networks to scan
-  -h, --help                    output usage information
-
-Commands:
-
-  list [options]   List all the available social networks.
 ```
 
 ## Options
@@ -78,7 +64,7 @@ socialScanner(username, {
 ---
 
 ## License
-The __socia-scanner__ is released under the MIT License.
+The __social-scanner__ is released under the MIT License by [b4dnewz](https://b4dnewz.github.io/).
 
 ## Contributing
 

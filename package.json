@@ -10,18 +10,17 @@
   "author": "b4dnewz <filippo@codekraft.it>",
   "license": "MIT",
   "dependencies": {
-    "async": "^2.5.0",
-    "commander": "^2.11.0",
+    "async": "^2.6.0",
     "request": "^2.83.0",
     "webpage-capture": "github:b4dnewz/webpage-capture"
   },
   "devDependencies": {
     "coveralls": "^3.0.0",
-    "eslint": "^4.9.0",
-    "eslint-config-xo-space": "^0.16.0",
+    "eslint": "^4.12.1",
+    "eslint-config-xo-space": "^0.17.0",
     "jest": "^21.2.1",
     "jest-cli": "^21.2.1",
-    "nsp": "^2.8.1"
+    "nsp": "^3.1.0"
   },
   "scripts": {
     "prepublish": "nsp check",
