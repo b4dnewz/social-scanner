@@ -29,24 +29,47 @@ The script can be used as a module and take specific options in order:
 ```javascript
 socialScanner(username, options, callback)
 ```
+By default it will perform an HTTP request for each rule to test the given username.
 ```javascript
 const socialScanner = require('../lib/index');
 
-socialScanner('codekraft-studio', { output: './output' }, (err, response) => {
+socialScanner('codekraft-studio', {}, (err, response) => {
   if (err) {
-    console.log('Error:', err);
+    console.log('Error:', JSON.stringify(err, null, 2));
     return;
   }
-  console.log('Response:', response);
+  console.log('Response:', JSON.stringify(response, null, 2));
 });
-
 ```
+You can also capture the output in two different formats, by default is BASE64 encoded PNG for web use, bu with the __screenshotOptions__ option you can specity to output to a file:
+```javascript
+socialScanner('codekraft-studio', {
+  capture: true,
+  screenshotOptions: {
+    onlySuccess: true,
+    outputType: 'file'
+  }
+}, (err, response) => {
+  // some code
+});
+```
+To specify a custom path for the files you must pass it to __output__ option like so:
+```javascript
+socialScanner('codekraft-studio', {
+  capture: true,
+  output: '/home/user/Desktop'
+});
+```
+
 
 ## Options
 * __capture__: Take a page screenshot once has been loaded
 * __crop__: If the screnshot should be cropped or not
 * __output__: The output file name for the screenshot
 * __restrict__: A list (or array) of social networks to scan
+* __restrictCategories__: An array of restrict rule categories
+* __requestOptions__: A object of options passed to [request](https://github.com/request/request)
+* __webshotOptions__: A object of options passed to [webpage-capture](https://github.com/b4dnewz/webpage-capture)
 
 ## Examples
 Scan a username against various social networks, without taking screenshots.
@@ -67,6 +90,14 @@ socialScanner(username, {
   restrict: ['facebook', 'github']
 }, (err, response) => { });
 ```
+
+Scan username against some restricted social categories.
+```javascript
+socialScanner(username, {
+  restrictCategories: ['community']
+}, (err, response) => { });
+```
+You can find more examples and the full code in the [example](https://github.com/b4dnewz/social-scanner/tree/master/example) folder.
 
 ---
 

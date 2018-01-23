@@ -1,13 +1,8 @@
 const socialScanner = require('../lib/index');
 
-socialScanner('b4dnEWZ', {
-  requestOptions: {
-    timeout: 1000
-  },
-  restrict: ['github']
-}, (err, response) => {
+socialScanner('codekraft-studio', {}, (err, response) => {
   if (err) {
-    console.log('Error:', err);
+    console.log('Error:', JSON.stringify(err, null, 2));
     return;
   }
   console.log('Response:', JSON.stringify(response, null, 2));
