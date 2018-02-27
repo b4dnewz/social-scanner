@@ -65,11 +65,12 @@ socialScanner('codekraft-studio', {
 ## Options
 * __capture__: Take a page screenshot once has been loaded
 * __crop__: If the screnshot should be cropped or not
+* __onlySuccess__: Returns only results that matched the search
 * __output__: The output file name for the screenshot
 * __restrict__: A list (or array) of social networks to scan
 * __restrictCategories__: An array of restrict rule categories
 * __requestOptions__: A object of options passed to [request](https://github.com/request/request)
-* __webshotOptions__: A object of options passed to [webpage-capture](https://github.com/b4dnewz/webpage-capture)
+* __screenshotOptions__: A object of options passed to [webpage-capture](https://github.com/b4dnewz/webpage-capture)
 
 ## Examples
 Scan a username against various social networks, without taking screenshots.
@@ -80,7 +81,8 @@ socialScanner(username, {}, (err, response) => { });
 Scan a username against various social networks, taking screenshots.
 ```javascript
 socialScanner(username, {
-  capture: true
+  capture: true,
+  onlySuccess: true
 }, (err, response) => { });
 ```
 
