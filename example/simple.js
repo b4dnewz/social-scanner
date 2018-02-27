@@ -1,6 +1,8 @@
 const socialScanner = require('../lib/index');
 
-socialScanner('codekraft-studio', {}, (err, response) => {
+socialScanner('tzentzen', {
+  onlySuccess: true
+}, (err, response) => {
   if (err) {
     console.log('Error:', JSON.stringify(err, null, 2));
     return;
