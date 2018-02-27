@@ -23,7 +23,7 @@
     "nsp": "^3.1.0"
   },
   "scripts": {
-    "prepublish": "nsp check",
+    "prepublish": "nsp check --warn-only",
     "pretest": "eslint . --fix",
     "test": "jest --coverage"
   },
