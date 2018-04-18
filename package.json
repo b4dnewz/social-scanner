@@ -29,6 +29,9 @@
   },
   "eslintConfig": {
     "extends": "xo-space",
+    "rules": {
+      "prefer-promise-reject-errors": "off"
+    },
     "env": {
       "jest": true,
       "node": true
