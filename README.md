@@ -154,7 +154,6 @@ socialScanner(username, {
   restrictCategories: ['community']
 }, (err, response) => { });
 ```
-You can find more examples and the full code in the [example](https://github.com/b4dnewz/social-scanner/tree/master/example) folder.
 
 ---
 
