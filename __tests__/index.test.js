@@ -1,7 +1,6 @@
-'use strict';
-
-const utils = require('../utils');
-const socialScanner = require('../index');
+const fs = require('fs');
+const utils = require('../lib/utils');
+const socialScanner = require('../lib/index');
 
 describe('socialScanner', () => {
   jest.setTimeout(40000);
@@ -95,7 +94,7 @@ describe('socialScanner', () => {
     });
   });
 
-  it('return an base64 encoded string by default', done => {
+  it('capture the result to a file', done => {
     socialScanner('b4dnewz', {
       restrict: ['github'],
       capture: true,
@@ -104,8 +103,10 @@ describe('socialScanner', () => {
       }
     }, (err, results) => {
       expect(err).toBeNull();
-      expect(results[0]).toHaveProperty('body');
-      expect(/[A-Za-z0-9+/=]/.test(results[0].body)).toBeTruthy();
+      expect(results[0]).toHaveProperty('output');
+      expect(() => {
+        fs.existsSync(results[0].output);
+      }).not.toThrow();
       done();
     });
   });
