@@ -10,27 +10,24 @@
   "author": "b4dnewz <filippo@codekraft.it>",
   "license": "MIT",
   "dependencies": {
-    "async": "^2.6.0",
-    "request": "^2.85.0",
-    "webpage-capture": "^0.1.3"
+    "async": "^2.6.2",
+    "request": "^2.88.0",
+    "webpage-capture": "^0.2.0"
   },
   "devDependencies": {
-    "coveralls": "^3.0.0",
-    "eslint": "^4.19.1",
-    "eslint-config-xo-space": "^0.18.0",
-    "jest": "^22.4.3",
-    "jest-cli": "^22.4.3",
-    "nsp": "^3.2.1"
+    "eslint": "^5.14.1",
+    "eslint-config-xo-space": "^0.21.0",
+    "jest": "^24.1.0"
   },
   "scripts": {
-    "prepublish": "nsp check --warn-only",
     "pretest": "eslint . --fix",
     "test": "jest --coverage"
   },
   "eslintConfig": {
     "extends": "xo-space",
     "rules": {
-      "prefer-promise-reject-errors": "off"
+      "prefer-promise-reject-errors": "off",
+      "valid-jsdoc": "off"
     },
     "env": {
       "jest": true,
