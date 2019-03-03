@@ -15,6 +15,7 @@
     "webpage-capture": "^0.2.0"
   },
   "devDependencies": {
+    "coveralls": "^3.0.3",
     "eslint": "^5.14.1",
     "eslint-config-xo-space": "^0.21.0",
     "jest": "^24.1.0"
