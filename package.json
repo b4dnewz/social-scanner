@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^2.6.2",
+    "mkdirp": "^0.5.1",
     "request": "^2.88.0",
     "webpage-capture": "^0.2.0"
   },
