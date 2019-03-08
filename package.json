@@ -11,18 +11,18 @@
   "license": "MIT",
   "dependencies": {
     "async": "^2.6.2",
-    "mkdirp": "^0.5.1",
     "request": "^2.88.0",
-    "webpage-capture": "^0.2.0"
+    "webpage-capture": "^0.2.1"
   },
   "devDependencies": {
     "coveralls": "^3.0.3",
-    "eslint": "^5.14.1",
+    "eslint": "^5.15.1",
     "eslint-config-xo-space": "^0.21.0",
-    "jest": "^24.1.0"
+    "jest": "^24.3.0"
   },
   "scripts": {
-    "pretest": "eslint . --fix",
+    "pretest": "npm run lint",
+    "lint": "eslint . --fix",
     "test": "jest --coverage"
   },
   "eslintConfig": {

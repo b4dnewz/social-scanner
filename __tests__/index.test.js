@@ -98,7 +98,7 @@ describe('socialScanner', () => {
     socialScanner('b4dnewz', {
       restrict: ['github'],
       capture: true,
-      screenshotOptions: {
+      captureOptions: {
         onlySuccess: false
       }
     }, (err, results) => {

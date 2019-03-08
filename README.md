@@ -43,12 +43,12 @@ socialScanner('codekraft-studio', {}, (err, response) => {
   console.log('Response:', JSON.stringify(response, null, 2));
 });
 ```
-You can also capture the output in different formats. By default is __BASE64__, but you can use __PNG__ or many more using the __screenshotOptions__ object to pass options directly to [webpage-capture](https://github.com/b4dnewz/webpage-capture) which is the one you is in charge of web screenshots.
+You can also capture the output in different formats. By default is __BASE64__, but you can use __PNG__ or many more using the __captureOptions__ object to pass options directly to [webpage-capture](https://github.com/b4dnewz/webpage-capture) which is the one you is in charge of web screenshots.
 ```javascript
 // outputType: 'base64|png|pdf'
 socialScanner('codekraft-studio', {
   capture: true,
-  screenshotOptions: {
+  captureOptions: {
     outputType: 'base64',
     onlySuccess: true,
     outputType: 'file'
@@ -90,7 +90,7 @@ By default no restrictions will be made and all the rules will be tested.
 * __onlySuccess__: Returns only results that matched the search
 * __capture__: Take screenshot of the resulting page(s)
 * __outputDir__: The output directory where place the screenshots
-* __screenshotOptions__: A object of options passed directly to [webpage-capture](https://github.com/b4dnewz/webpage-capture)
+* __captureOptions__: A object of options passed directly to [webpage-capture](https://github.com/b4dnewz/webpage-capture)
   * __crop__: If the screnshot should be cropped or not
   * __onlySuccess__: Returns only results that matched the search
   * __outputType__: Change the output format for the capture result
@@ -99,7 +99,7 @@ By default no restrictions will be made and all the rules will be tested.
 ```js
 onlySuccess: false,
 capture: false,
-screenshotOptions: {
+captureOptions: {
   outputType: 'base64',
   onlySuccess: false,
   crop: true
@@ -133,7 +133,7 @@ Scan a username against various social networks, taking screenshots to file in t
 socialScanner(username, {
   onlySuccess: true,
   capture: true,
-  screenshotOptions: {
+  captureOptions: {
     outputType: 'file'
   }
 }, (err, response) => { });
