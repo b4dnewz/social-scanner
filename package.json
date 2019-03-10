@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "async": "^2.6.2",
-    "request": "^2.88.0",
+    "axios": "^0.18.0",
     "webpage-capture": "^0.2.1"
   },
   "devDependencies": {
