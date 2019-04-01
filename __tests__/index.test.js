@@ -104,6 +104,7 @@ describe('socialScanner', () => {
       expect(results[0]).toHaveProperty('output');
       expect(() => {
         fs.existsSync(results[0].output);
+        fs.unlinkSync(results[0].output);
       }).not.toThrow();
       done();
     });
