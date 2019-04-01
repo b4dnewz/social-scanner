@@ -3,8 +3,6 @@ const utils = require('../lib/utils');
 const socialScanner = require('../lib/index');
 
 describe('socialScanner', () => {
-  jest.setTimeout(40000);
-
   it('exports by default a function', () => {
     expect(typeof socialScanner).toBe('function');
   });

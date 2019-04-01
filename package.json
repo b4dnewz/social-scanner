@@ -9,31 +9,27 @@
   "repository": "git@github.com:b4dnewz/social-scanner.git",
   "author": "b4dnewz <filippo@codekraft.it>",
   "license": "MIT",
-  "dependencies": {
-    "async": "^2.6.2",
-    "axios": "^0.18.0",
-    "webpage-capture": "^0.2.1"
-  },
-  "devDependencies": {
-    "coveralls": "^3.0.3",
-    "eslint": "^5.15.1",
-    "eslint-config-xo-space": "^0.21.0",
-    "jest": "^24.3.0"
-  },
   "scripts": {
     "pretest": "npm run lint",
     "lint": "eslint . --fix",
     "test": "jest --coverage"
   },
+  "dependencies": {
+    "async": "^2.6.2",
+    "axios": "^0.18.0",
+    "webpage-capture": "^0.2.2"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.3",
+    "eslint": "^5.16.0",
+    "jest": "^24.5.0"
+  },
   "eslintConfig": {
-    "extends": "xo-space",
-    "rules": {
-      "prefer-promise-reject-errors": "off",
-      "valid-jsdoc": "off"
-    },
+    "extends": "eslint:recommended",
     "env": {
       "jest": true,
-      "node": true
+      "node": true,
+      "es6": true
     }
   },
   "jest": {
